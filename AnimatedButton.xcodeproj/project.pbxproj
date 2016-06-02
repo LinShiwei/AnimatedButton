@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5604EC421D00504D008BE1D9 /* PlayToPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604EC411D00504D008BE1D9 /* PlayToPauseButton.swift */; };
+		5621BB281CFF074500B5DE42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621BB271CFF074500B5DE42 /* AppDelegate.swift */; };
+		5621BB2A1CFF074600B5DE42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621BB291CFF074600B5DE42 /* ViewController.swift */; };
+		5621BB2D1CFF074600B5DE42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5621BB2B1CFF074600B5DE42 /* Main.storyboard */; };
+		5621BB2F1CFF074600B5DE42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5621BB2E1CFF074600B5DE42 /* Assets.xcassets */; };
+		5621BB321CFF074600B5DE42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5621BB301CFF074600B5DE42 /* LaunchScreen.storyboard */; };
+		5621BB3D1CFF074600B5DE42 /* AnimatedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621BB3C1CFF074600B5DE42 /* AnimatedButtonTests.swift */; };
+		5621BB4A1CFF07A500B5DE42 /* CrossButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621BB471CFF07A500B5DE42 /* CrossButton.swift */; };
+		5621BB4B1CFF07A500B5DE42 /* XToVButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621BB481CFF07A500B5DE42 /* XToVButton.swift */; };
+		5621BB4C1CFF07A500B5DE42 /* TickButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621BB491CFF07A500B5DE42 /* TickButton.swift */; };
+		5621BB501CFF0B4200B5DE42 /* Ruler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621BB4F1CFF0B4200B5DE42 /* Ruler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5621BB391CFF074600B5DE42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5621BB1C1CFF074500B5DE42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5621BB231CFF074500B5DE42;
+			remoteInfo = AnimatedButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5604EC411D00504D008BE1D9 /* PlayToPauseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayToPauseButton.swift; sourceTree = "<group>"; };
+		5621BB241CFF074500B5DE42 /* AnimatedButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatedButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5621BB271CFF074500B5DE42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5621BB291CFF074600B5DE42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5621BB2C1CFF074600B5DE42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5621BB2E1CFF074600B5DE42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5621BB311CFF074600B5DE42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5621BB331CFF074600B5DE42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5621BB381CFF074600B5DE42 /* AnimatedButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimatedButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5621BB3C1CFF074600B5DE42 /* AnimatedButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedButtonTests.swift; sourceTree = "<group>"; };
+		5621BB3E1CFF074600B5DE42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5621BB471CFF07A500B5DE42 /* CrossButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossButton.swift; sourceTree = "<group>"; };
+		5621BB481CFF07A500B5DE42 /* XToVButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XToVButton.swift; sourceTree = "<group>"; };
+		5621BB491CFF07A500B5DE42 /* TickButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickButton.swift; sourceTree = "<group>"; };
+		5621BB4F1CFF0B4200B5DE42 /* Ruler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ruler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5621BB211CFF074500B5DE42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5621BB351CFF074600B5DE42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5621BB1B1CFF074500B5DE42 = {
+			isa = PBXGroup;
+			children = (
+				5621BB261CFF074500B5DE42 /* AnimatedButton */,
+				5621BB3B1CFF074600B5DE42 /* AnimatedButtonTests */,
+				5621BB251CFF074500B5DE42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5621BB251CFF074500B5DE42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5621BB241CFF074500B5DE42 /* AnimatedButton.app */,
+				5621BB381CFF074600B5DE42 /* AnimatedButtonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5621BB261CFF074500B5DE42 /* AnimatedButton */ = {
+			isa = PBXGroup;
+			children = (
+				5621BB291CFF074600B5DE42 /* ViewController.swift */,
+				5621BB4D1CFF07B900B5DE42 /* Buttons */,
+				5621BB4E1CFF080200B5DE42 /* Support */,
+				5621BB4F1CFF0B4200B5DE42 /* Ruler.swift */,
+			);
+			path = AnimatedButton;
+			sourceTree = "<group>";
+		};
+		5621BB3B1CFF074600B5DE42 /* AnimatedButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				5621BB3C1CFF074600B5DE42 /* AnimatedButtonTests.swift */,
+				5621BB3E1CFF074600B5DE42 /* Info.plist */,
+			);
+			path = AnimatedButtonTests;
+			sourceTree = "<group>";
+		};
+		5621BB4D1CFF07B900B5DE42 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				5621BB471CFF07A500B5DE42 /* CrossButton.swift */,
+				5621BB481CFF07A500B5DE42 /* XToVButton.swift */,
+				5621BB491CFF07A500B5DE42 /* TickButton.swift */,
+				5604EC411D00504D008BE1D9 /* PlayToPauseButton.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		5621BB4E1CFF080200B5DE42 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				5621BB2B1CFF074600B5DE42 /* Main.storyboard */,
+				5621BB271CFF074500B5DE42 /* AppDelegate.swift */,
+				5621BB2E1CFF074600B5DE42 /* Assets.xcassets */,
+				5621BB301CFF074600B5DE42 /* LaunchScreen.storyboard */,
+				5621BB331CFF074600B5DE42 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5621BB231CFF074500B5DE42 /* AnimatedButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5621BB411CFF074600B5DE42 /* Build configuration list for PBXNativeTarget "AnimatedButton" */;
+			buildPhases = (
+				5621BB201CFF074500B5DE42 /* Sources */,
+				5621BB211CFF074500B5DE42 /* Frameworks */,
+				5621BB221CFF074500B5DE42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimatedButton;
+			productName = AnimatedButton;
+			productReference = 5621BB241CFF074500B5DE42 /* AnimatedButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5621BB371CFF074600B5DE42 /* AnimatedButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5621BB441CFF074600B5DE42 /* Build configuration list for PBXNativeTarget "AnimatedButtonTests" */;
+			buildPhases = (
+				5621BB341CFF074600B5DE42 /* Sources */,
+				5621BB351CFF074600B5DE42 /* Frameworks */,
+				5621BB361CFF074600B5DE42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5621BB3A1CFF074600B5DE42 /* PBXTargetDependency */,
+			);
+			name = AnimatedButtonTests;
+			productName = AnimatedButtonTests;
+			productReference = 5621BB381CFF074600B5DE42 /* AnimatedButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5621BB1C1CFF074500B5DE42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Linsw;
+				TargetAttributes = {
+					5621BB231CFF074500B5DE42 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4F6NMKB449;
+					};
+					5621BB371CFF074600B5DE42 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4F6NMKB449;
+						TestTargetID = 5621BB231CFF074500B5DE42;
+					};
+				};
+			};
+			buildConfigurationList = 5621BB1F1CFF074500B5DE42 /* Build configuration list for PBXProject "AnimatedButton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5621BB1B1CFF074500B5DE42;
+			productRefGroup = 5621BB251CFF074500B5DE42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5621BB231CFF074500B5DE42 /* AnimatedButton */,
+				5621BB371CFF074600B5DE42 /* AnimatedButtonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5621BB221CFF074500B5DE42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5621BB321CFF074600B5DE42 /* LaunchScreen.storyboard in Resources */,
+				5621BB2F1CFF074600B5DE42 /* Assets.xcassets in Resources */,
+				5621BB2D1CFF074600B5DE42 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5621BB361CFF074600B5DE42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5621BB201CFF074500B5DE42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5621BB4B1CFF07A500B5DE42 /* XToVButton.swift in Sources */,
+				5604EC421D00504D008BE1D9 /* PlayToPauseButton.swift in Sources */,
+				5621BB4C1CFF07A500B5DE42 /* TickButton.swift in Sources */,
+				5621BB501CFF0B4200B5DE42 /* Ruler.swift in Sources */,
+				5621BB2A1CFF074600B5DE42 /* ViewController.swift in Sources */,
+				5621BB4A1CFF07A500B5DE42 /* CrossButton.swift in Sources */,
+				5621BB281CFF074500B5DE42 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5621BB341CFF074600B5DE42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5621BB3D1CFF074600B5DE42 /* AnimatedButtonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5621BB3A1CFF074600B5DE42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5621BB231CFF074500B5DE42 /* AnimatedButton */;
+			targetProxy = 5621BB391CFF074600B5DE42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5621BB2B1CFF074600B5DE42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5621BB2C1CFF074600B5DE42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5621BB301CFF074600B5DE42 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5621BB311CFF074600B5DE42 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5621BB3F1CFF074600B5DE42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5621BB401CFF074600B5DE42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5621BB421CFF074600B5DE42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AnimatedButton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lsw.self.AnimatedButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5621BB431CFF074600B5DE42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AnimatedButton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lsw.self.AnimatedButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5621BB451CFF074600B5DE42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AnimatedButtonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lsw.self.AnimatedButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimatedButton.app/AnimatedButton";
+			};
+			name = Debug;
+		};
+		5621BB461CFF074600B5DE42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AnimatedButtonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lsw.self.AnimatedButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimatedButton.app/AnimatedButton";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5621BB1F1CFF074500B5DE42 /* Build configuration list for PBXProject "AnimatedButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5621BB3F1CFF074600B5DE42 /* Debug */,
+				5621BB401CFF074600B5DE42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5621BB411CFF074600B5DE42 /* Build configuration list for PBXNativeTarget "AnimatedButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5621BB421CFF074600B5DE42 /* Debug */,
+				5621BB431CFF074600B5DE42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5621BB441CFF074600B5DE42 /* Build configuration list for PBXNativeTarget "AnimatedButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5621BB451CFF074600B5DE42 /* Debug */,
+				5621BB461CFF074600B5DE42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5621BB1C1CFF074500B5DE42 /* Project object */;
+}
