@@ -51,7 +51,6 @@ class PlayToPauseButton: UIButton {
             let strokingPath = CGPathCreateCopyByStrokingPath(layer.path, nil, 4, .Round, .Miter, 4)
             
             layer.bounds = CGPathGetPathBoundingBox(strokingPath)
-            print(layer.bounds)
             layer.actions = [
                 "strokeStart": NSNull(),
                 "strokeEnd": NSNull(),
@@ -78,6 +77,40 @@ class PlayToPauseButton: UIButton {
     
     var change:Bool = false {
         didSet{
+            let transformOne = CABasicAnimation(keyPath: "transform")
+            transformOne.timingFunction = CAMediaTimingFunction(controlPoints: 0.5, -0.8, 0.5, 1.85)
+            transformOne.duration = 0.4
+            transformOne.fillMode = kCAFillModeBackwards
+            
+            let strokeStartLeft = CABasicAnimation(keyPath: "strokeStart")
+            strokeStartLeft.duration = 0.6
+            strokeStartLeft.timingFunction = CAMediaTimingFunction(controlPoints: 0.1, 0, 0.4, 1)
+            strokeStartLeft.fillMode = kCAFillModeBackwards
+            
+            let strokeEndLeft = CABasicAnimation(keyPath: "strokeEnd")
+            strokeEndLeft.duration = 0.6
+            strokeEndLeft.timingFunction = CAMediaTimingFunction(controlPoints: 0.1, 0, 0.4, 1)
+            strokeEndLeft.fillMode = kCAFillModeBackwards
+            if change {
+                transformOne.toValue = NSValue(CATransform3D:CATransform3DMakeTranslation(4, 0, 0))
+                
+                strokeStartLeft.toValue = 0.05
+                strokeStartLeft.beginTime = CACurrentMediaTime()
+                strokeEndLeft.toValue = 0.95
+                strokeEndLeft.beginTime = CACurrentMediaTime()
+            }else{
+                transformOne.toValue = NSValue(CATransform3D:CATransform3DIdentity)
+                
+                strokeStartLeft.toValue = 0.0
+                strokeStartLeft.beginTime = CACurrentMediaTime()
+                strokeEndLeft.toValue = 1.0
+                strokeEndLeft.beginTime = CACurrentMediaTime()
+            }
+            self.layerOne.ocb_applyAnimation(transformOne)
+            self.layerOne.ocb_applyAnimation(strokeStartLeft)
+            self.layerOne.ocb_applyAnimation(strokeEndLeft)
+            
+            
             let transformTwo = CABasicAnimation(keyPath: "transform")
             transformTwo.timingFunction = CAMediaTimingFunction(controlPoints: 0.5, -0.8, 0.5, 1.85)
             transformTwo.duration = 0.4
@@ -87,21 +120,38 @@ class PlayToPauseButton: UIButton {
             
             let rotateAngle = CGFloat(M_PI/3.0)
 
-            
+            let strokeStartRight = CABasicAnimation(keyPath: "strokeStart")
+            strokeStartRight.duration = 0.6
+            strokeStartRight.timingFunction = CAMediaTimingFunction(controlPoints: 0.1, 0, 0.4, 1)
+            strokeStartRight.fillMode = kCAFillModeBackwards
+
             if change {
-                let translation = CATransform3DMakeTranslation(-4, 0, 0)
-                transformTwo.toValue = NSValue(CATransform3D:CATransform3DRotate(translation, rotateAngle, 0, 0, 1))
+                transformTwo.toValue = NSValue(CATransform3D:CATransform3DRotate(CATransform3DMakeTranslation(-4, 0, 0), rotateAngle, 0, 0, 1))
                 transformTwo.beginTime = CACurrentMediaTime()
                 
-                transformThree.toValue = NSValue(CATransform3D:CATransform3DRotate(translation, -rotateAngle, 0, 0, 1))
+                transformThree.toValue = NSValue(CATransform3D:CATransform3DRotate(CATransform3DMakeTranslation(-4, 0, 0), -rotateAngle, 0, 0, 1))
                 transformThree.beginTime = CACurrentMediaTime()
+                
+                strokeStartRight.toValue = 0.55
+                strokeStartRight.beginTime = CACurrentMediaTime()
             }else{
                 transformTwo.toValue = NSValue(CATransform3D:CATransform3DIdentity)
                 transformTwo.beginTime = CACurrentMediaTime()
                 
                 transformThree.toValue = NSValue(CATransform3D:CATransform3DIdentity)
                 transformThree.beginTime = CACurrentMediaTime()
+                
+                strokeStartRight.toValue = 0
+                strokeStartRight.beginTime = CACurrentMediaTime()
             }
+            
+            
+            self.layerTwo.ocb_applyAnimation(transformTwo)
+            self.layerTwo.ocb_applyAnimation(strokeStartRight)
+            
+            self.layerThree.ocb_applyAnimation(transformThree)
+            self.layerThree.ocb_applyAnimation(strokeStartRight)
+
         }
     }
 

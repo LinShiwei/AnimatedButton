@@ -43,7 +43,6 @@ class CrossButton: UIButton {
             let strokingPath = CGPathCreateCopyByStrokingPath(layer.path, nil, 4, .Round, .Miter, 4)
             
             layer.bounds = CGPathGetPathBoundingBox(strokingPath)
-            print(layer.bounds)
             layer.actions = [
                 "strokeStart": NSNull(),
                 "strokeEnd": NSNull(),

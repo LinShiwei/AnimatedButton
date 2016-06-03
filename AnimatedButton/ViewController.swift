@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var xToVButton : XToVButton!
     var tickButton : TickButton!
     var playToPauseButton : PlayToPauseButton!
-    
+    var roundToRectButton : RoundToRectButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 38.0 / 255, green: 151.0 / 255, blue: 68.0 / 255, alpha: 1)
@@ -30,7 +30,10 @@ class ViewController: UIViewController {
         self.playToPauseButton.addTarget(self, action: "playToPause:", forControlEvents: .TouchUpInside)
         self.view.addSubview(playToPauseButton)
         
-
+        self.roundToRectButton = RoundToRectButton(frame: CGRect(x: 50, y: 350, width: 40, height: 40))
+        self.roundToRectButton.addTarget(self, action: "roundToRect:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(roundToRectButton)
+        
         
     }
     
@@ -46,6 +49,9 @@ class ViewController: UIViewController {
     }
     func playToPause(sender:UIButton){
         self.playToPauseButton.change = !self.playToPauseButton.change
+    }
+    func roundToRect(sender:UIButton){
+        self.roundToRectButton.change = !self.roundToRectButton.change
     }
 }
 

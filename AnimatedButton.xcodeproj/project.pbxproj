@@ -18,6 +18,7 @@
 		5621BB4B1CFF07A500B5DE42 /* XToVButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621BB481CFF07A500B5DE42 /* XToVButton.swift */; };
 		5621BB4C1CFF07A500B5DE42 /* TickButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621BB491CFF07A500B5DE42 /* TickButton.swift */; };
 		5621BB501CFF0B4200B5DE42 /* Ruler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5621BB4F1CFF0B4200B5DE42 /* Ruler.swift */; };
+		564AF4AA1D0068B10057EAFF /* RoundToRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564AF4A91D0068B10057EAFF /* RoundToRectButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		5621BB481CFF07A500B5DE42 /* XToVButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XToVButton.swift; sourceTree = "<group>"; };
 		5621BB491CFF07A500B5DE42 /* TickButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickButton.swift; sourceTree = "<group>"; };
 		5621BB4F1CFF0B4200B5DE42 /* Ruler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ruler.swift; sourceTree = "<group>"; };
+		564AF4A91D0068B10057EAFF /* RoundToRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundToRectButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				5621BB481CFF07A500B5DE42 /* XToVButton.swift */,
 				5621BB491CFF07A500B5DE42 /* TickButton.swift */,
 				5604EC411D00504D008BE1D9 /* PlayToPauseButton.swift */,
+				564AF4A91D0068B10057EAFF /* RoundToRectButton.swift */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				5621BB2A1CFF074600B5DE42 /* ViewController.swift in Sources */,
 				5621BB4A1CFF07A500B5DE42 /* CrossButton.swift in Sources */,
 				5621BB281CFF074500B5DE42 /* AppDelegate.swift in Sources */,
+				564AF4AA1D0068B10057EAFF /* RoundToRectButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

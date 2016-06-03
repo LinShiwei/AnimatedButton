@@ -31,7 +31,6 @@ class Ruler: UIView {
     }()
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        print(windowBounds)
         let verticalLayer = CAShapeLayer()
         let horizonalLayer = CAShapeLayer()
         
