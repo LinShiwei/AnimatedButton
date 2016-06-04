@@ -39,7 +39,7 @@ class Ruler: UIView {
         
         for layer in [ verticalLayer , horizonalLayer] {
             layer.fillColor = nil
-            layer.strokeColor = UIColor.purpleColor().CGColor
+            layer.strokeColor = UIColor.grayColor().CGColor
             layer.lineWidth = 1
             layer.miterLimit = 1
             layer.masksToBounds = true

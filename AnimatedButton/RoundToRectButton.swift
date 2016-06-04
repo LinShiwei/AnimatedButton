@@ -42,12 +42,12 @@ class RoundToRectButton: UIButton {
         for layer in [ self.shapeLayer] {
             layer.fillColor = nil
             layer.strokeColor = UIColor.blackColor().CGColor
-            layer.lineWidth = 2
-            layer.miterLimit = 2
+            layer.lineWidth = 4
+            layer.miterLimit = 4
             layer.lineCap = kCALineCapRound
             layer.masksToBounds = true
             
-            let strokingPath = CGPathCreateCopyByStrokingPath(layer.path, nil, 2, .Round, .Miter, 2)
+            let strokingPath = CGPathCreateCopyByStrokingPath(layer.path, nil, 4, .Round, .Miter, 4)
             
             layer.bounds = CGPathGetPathBoundingBox(strokingPath)
             layer.actions = [
