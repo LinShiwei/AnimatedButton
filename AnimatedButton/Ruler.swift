@@ -13,18 +13,21 @@ class Ruler: UIView {
     
     let verticalPaths:CGPath = {
         let path = CGPathCreateMutable()
-        for var row = 0;row < Int(windowBounds.height*2); row+=5{
+        
+        for var row in 0..<Int(windowBounds.height*2){
             CGPathMoveToPoint(path, nil, 0, CGFloat(row))
             CGPathAddLineToPoint(path, nil, windowBounds.width*2, CGFloat(row))
+            row += 5
         }
         
         return path
     }()
     let horizonalPaths:CGPath = {
         let path = CGPathCreateMutable()
-        for var column = 0;column < Int(windowBounds.width*2); column+=5{
+        for var column in 0..<Int(windowBounds.width*2){
             CGPathMoveToPoint(path, nil, CGFloat(column), 0)
             CGPathAddLineToPoint(path, nil, CGFloat(column), windowBounds.height*2)
+            column += 5
         }
         
         return path
