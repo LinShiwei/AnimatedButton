@@ -22,17 +22,17 @@ class XToVButton: CrossButton {
             let rotateAngle = CGFloat(M_PI_4 - asin(sqrt(2)/4.0))
             assert(rotateAngle > 0)
             if change {
-                transformOne.toValue = NSValue(CATransform3D:CATransform3DMakeRotation(rotateAngle, 0, 0, 1))
+                transformOne.toValue = NSValue(caTransform3D:CATransform3DMakeRotation(rotateAngle, 0, 0, 1))
                 transformOne.beginTime = CACurrentMediaTime()
                 
-                transformTwo.toValue = NSValue(CATransform3D:CATransform3DMakeRotation(-rotateAngle, 0, 0, 1))
+                transformTwo.toValue = NSValue(caTransform3D:CATransform3DMakeRotation(-rotateAngle, 0, 0, 1))
                 transformTwo.beginTime = CACurrentMediaTime()
 
             }else{
-                transformOne.toValue = NSValue(CATransform3D:CATransform3DIdentity)
+                transformOne.toValue = NSValue(caTransform3D:CATransform3DIdentity)
                 transformOne.beginTime = CACurrentMediaTime()
                 
-                transformTwo.toValue = NSValue(CATransform3D:CATransform3DIdentity)
+                transformTwo.toValue = NSValue(caTransform3D:CATransform3DIdentity)
                 transformTwo.beginTime = CACurrentMediaTime()
             }
             self.crossOne.ocb_applyAnimation(transformOne)

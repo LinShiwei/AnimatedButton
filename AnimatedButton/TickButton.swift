@@ -28,20 +28,20 @@ class TickButton: CrossButton {
                 strokeEnd.toValue = 0.5
                 strokeEnd.beginTime = CACurrentMediaTime()
 
-                transformOne.toValue = NSValue(CATransform3D:CATransform3DMakeTranslation(-5, 10, 0))
+                transformOne.toValue = NSValue(caTransform3D:CATransform3DMakeTranslation(-5, 10, 0))
                 transformOne.beginTime = CACurrentMediaTime()+0.2
 
-                transformTwo.toValue = NSValue(CATransform3D:CATransform3DMakeTranslation(5, 0, 0))
+                transformTwo.toValue = NSValue(caTransform3D:CATransform3DMakeTranslation(5, 0, 0))
                 transformTwo.beginTime = CACurrentMediaTime()+0.2
                 
             }else{
                 strokeEnd.toValue = 1.0
                 strokeEnd.beginTime = CACurrentMediaTime()+0.2
 
-                transformOne.toValue = NSValue(CATransform3D:CATransform3DIdentity)
+                transformOne.toValue = NSValue(caTransform3D:CATransform3DIdentity)
                 transformOne.beginTime = CACurrentMediaTime()
                 
-                transformTwo.toValue = NSValue(CATransform3D:CATransform3DIdentity)
+                transformTwo.toValue = NSValue(caTransform3D:CATransform3DIdentity)
                 transformTwo.beginTime = CACurrentMediaTime()
             }
             self.crossOne.ocb_applyAnimation(transformOne)

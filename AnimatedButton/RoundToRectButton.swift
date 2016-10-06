@@ -18,18 +18,20 @@ class RoundToRectButton: UIButton {
     var shapeLayer = CAShapeLayer()
 
     let shapePath: CGPath = {
-        let path = CGPathCreateMutable()
-        CGPathMoveToPoint(path, nil, 10, 14.77277)
-        CGPathAddLineToPoint(path, nil, 10, 30)
-        CGPathAddLineToPoint(path, nil, 30, 30)
-        CGPathAddLineToPoint(path, nil, 30, 10)
-        CGPathAddLineToPoint(path, nil, 10, 10)
-        CGPathAddLineToPoint(path, nil, 10, 14.77277)
-        CGPathAddArcToPoint(path, nil, 20-12.73239, 20, 10, 30-4.77277, radius)
-        CGPathAddArcToPoint(path, nil, 20, 20+24.35782, 30, 30-4.77277, radius)
-        CGPathAddArcToPoint(path, nil, 20+12.73239, 20, 30, 10+4.77277, radius)
-        CGPathAddArcToPoint(path, nil, 20, 20-24.35782, 10, 14.77277, radius)
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 10, y: 14.77277))
+        path.addLine(to: CGPoint(x: 10, y: 30))
+        path.addLine(to: CGPoint(x: 30, y: 30))
+        path.addLine(to: CGPoint(x: 30, y: 10))
+        path.addLine(to: CGPoint(x: 10, y: 10))
+        path.addLine(to: CGPoint(x: 10, y: 14.77277))
+        
+        path.addArc(tangent1End: CGPoint(x:20-12.73239 ,y: 20), tangent2End: CGPoint(x: 10,y: 30-4.77277), radius: radius)
+        path.addArc(tangent1End: CGPoint(x:20 ,y: 20+24.35782), tangent2End: CGPoint(x: 30,y: 30-4.77277), radius: radius)
+        path.addArc(tangent1End: CGPoint(x:20+12.73239 ,y: 20), tangent2End: CGPoint(x: 30,y: 10+4.77277), radius: radius)
+        path.addArc(tangent1End: CGPoint(x:20 ,y: 20-24.35782), tangent2End: CGPoint(x: 10,y: 14.77277), radius: radius)
 
+        
         return path
     }()
   
@@ -41,15 +43,15 @@ class RoundToRectButton: UIButton {
         
         for layer in [ self.shapeLayer] {
             layer.fillColor = nil
-            layer.strokeColor = UIColor.blackColor().CGColor
+            layer.strokeColor = UIColor.black.cgColor
             layer.lineWidth = 4
             layer.miterLimit = 4
             layer.lineCap = kCALineCapRound
             layer.masksToBounds = true
             
-            let strokingPath = CGPathCreateCopyByStrokingPath(layer.path, nil, 4, .Round, .Miter, 4)
+            let strokingPath = CGPath(__byStroking: layer.path!, transform: nil, lineWidth: 4, lineCap: .round, lineJoin: .miter, miterLimit: 4)
             
-            layer.bounds = CGPathGetPathBoundingBox(strokingPath)
+            layer.bounds = (strokingPath?.boundingBoxOfPath)!
             layer.actions = [
                 "strokeStart": NSNull(),
                 "strokeEnd": NSNull(),

@@ -14,15 +14,16 @@ class CrossButton: UIButton {
     var crossTwo = CAShapeLayer()
     
     let crossPathOne: CGPath = {
-        let path = CGPathCreateMutable()
-        CGPathMoveToPoint(path, nil, 10, 10)
-        CGPathAddLineToPoint(path, nil, 30, 30)
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 10, y: 10))
+        path.addLine(to: CGPoint(x: 30, y: 30))
+
         return path
     }()
     let crossPathTwo: CGPath = {
-        let path = CGPathCreateMutable()
-        CGPathMoveToPoint(path, nil, 10, 30)
-        CGPathAddLineToPoint(path, nil, 30, 10)
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 10, y: 30))
+        path.addLine(to: CGPoint(x: 30, y: 10))
         return path
     }()
     
@@ -34,15 +35,15 @@ class CrossButton: UIButton {
         
         for layer in [ self.crossOne, self.crossTwo ] {
             layer.fillColor = nil
-            layer.strokeColor = UIColor.blackColor().CGColor
+            layer.strokeColor = UIColor.black.cgColor
             layer.lineWidth = 4
             layer.miterLimit = 4
             layer.lineCap = kCALineCapRound
             layer.masksToBounds = true
             
-            let strokingPath = CGPathCreateCopyByStrokingPath(layer.path, nil, 4, .Round, .Miter, 4)
+            let strokingPath = CGPath(__byStroking: layer.path!, transform: nil, lineWidth: 4, lineCap: .round, lineJoin: .miter, miterLimit: 4)
             
-            layer.bounds = CGPathGetPathBoundingBox(strokingPath)
+            layer.bounds = (strokingPath?.boundingBoxOfPath)!
             layer.actions = [
                 "strokeStart": NSNull(),
                 "strokeEnd": NSNull(),
@@ -58,7 +59,7 @@ class CrossButton: UIButton {
         self.crossTwo.anchorPoint = CGPoint(x: 22.0 / 24.0, y: 2.0 / 24.0)
         self.crossTwo.position = CGPoint(x: 30, y: 10)
     }
-    func setAnchorPoint(anchorPoint:CGPoint,forLayer layer:CALayer){
+    func setAnchorPoint(_ anchorPoint:CGPoint,forLayer layer:CALayer){
         let oldFrame = layer.frame
         layer.anchorPoint = anchorPoint
         layer.frame = oldFrame
@@ -76,14 +77,14 @@ class CrossButton: UIButton {
 
 
 extension CALayer {
-    func ocb_applyAnimation(animation: CABasicAnimation) {
+    func ocb_applyAnimation(_ animation: CABasicAnimation) {
         let copy = animation.copy() as! CABasicAnimation
         
         if copy.fromValue == nil {
-            copy.fromValue = self.presentationLayer()!.valueForKeyPath(copy.keyPath!)
+            copy.fromValue = self.presentation()!.value(forKeyPath: copy.keyPath!)
         }
         
-        self.addAnimation(copy, forKey: copy.keyPath)
+        self.add(copy, forKey: copy.keyPath)
         //由于这个动画的fillMode是Backwards所以addAnimation后，直接进入动画的初始状态，使得下面的setValue在视觉上并没有立即生效。下面的setValue反应的是最终的效果值
         self.setValue(copy.toValue, forKeyPath:copy.keyPath!)
     }

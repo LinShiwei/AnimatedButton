@@ -15,21 +15,24 @@ class PlayToPauseButton: UIButton {
     var layerThree = CAShapeLayer()
     
     let lineOne: CGPath = {
-        let path = CGPathCreateMutable()
-        CGPathMoveToPoint(path, nil, 10, 20-11.547)
-        CGPathAddLineToPoint(path, nil, 10, 20+11.547)
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 10, y: 20-11.547))
+        path.addLine(to: CGPoint(x: 10, y: 20+11.547))
+
         return path
     }()
     let lineTwo: CGPath = {
-        let path = CGPathCreateMutable()
-        CGPathMoveToPoint(path, nil, 10, 20-11.547)
-        CGPathAddLineToPoint(path, nil, 30, 20)
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 10, y: 20-11.547))
+        path.addLine(to: CGPoint(x: 30, y: 20))
+
         return path
     }()
     let lineThree: CGPath = {
-        let path = CGPathCreateMutable()
-        CGPathMoveToPoint(path, nil, 10, 20+11.547)
-        CGPathAddLineToPoint(path, nil, 30, 20)
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 10, y: 20+11.547))
+        path.addLine(to: CGPoint(x: 30, y: 20))
+
         return path
     }()
     
@@ -42,15 +45,15 @@ class PlayToPauseButton: UIButton {
         
         for layer in [ self.layerOne, self.layerTwo, self.layerThree ] {
             layer.fillColor = nil
-            layer.strokeColor = UIColor.blackColor().CGColor
+            layer.strokeColor = UIColor.black.cgColor
             layer.lineWidth = 4
             layer.miterLimit = 4
             layer.lineCap = kCALineCapRound
             layer.masksToBounds = true
             
-            let strokingPath = CGPathCreateCopyByStrokingPath(layer.path, nil, 4, .Round, .Miter, 4)
+            let strokingPath = CGPath(__byStroking: layer.path!, transform: nil, lineWidth: 4, lineCap: .round, lineJoin: .miter, miterLimit: 4)
             
-            layer.bounds = CGPathGetPathBoundingBox(strokingPath)
+            layer.bounds = (strokingPath?.boundingBoxOfPath)!
             layer.actions = [
                 "strokeStart": NSNull(),
                 "strokeEnd": NSNull(),
@@ -92,14 +95,14 @@ class PlayToPauseButton: UIButton {
             strokeEndLeft.timingFunction = CAMediaTimingFunction(controlPoints: 0.1, 0, 0.4, 1)
             strokeEndLeft.fillMode = kCAFillModeBackwards
             if change {
-                transformOne.toValue = NSValue(CATransform3D:CATransform3DMakeTranslation(4, 0, 0))
+                transformOne.toValue = NSValue(caTransform3D:CATransform3DMakeTranslation(4, 0, 0))
                 
                 strokeStartLeft.toValue = 0.05
                 strokeStartLeft.beginTime = CACurrentMediaTime()
                 strokeEndLeft.toValue = 0.95
                 strokeEndLeft.beginTime = CACurrentMediaTime()
             }else{
-                transformOne.toValue = NSValue(CATransform3D:CATransform3DIdentity)
+                transformOne.toValue = NSValue(caTransform3D:CATransform3DIdentity)
                 
                 strokeStartLeft.toValue = 0.0
                 strokeStartLeft.beginTime = CACurrentMediaTime()
@@ -126,19 +129,19 @@ class PlayToPauseButton: UIButton {
             strokeStartRight.fillMode = kCAFillModeBackwards
 
             if change {
-                transformTwo.toValue = NSValue(CATransform3D:CATransform3DRotate(CATransform3DMakeTranslation(-4, 0, 0), rotateAngle, 0, 0, 1))
+                transformTwo.toValue = NSValue(caTransform3D:CATransform3DRotate(CATransform3DMakeTranslation(-4, 0, 0), rotateAngle, 0, 0, 1))
                 transformTwo.beginTime = CACurrentMediaTime()
                 
-                transformThree.toValue = NSValue(CATransform3D:CATransform3DRotate(CATransform3DMakeTranslation(-4, 0, 0), -rotateAngle, 0, 0, 1))
+                transformThree.toValue = NSValue(caTransform3D:CATransform3DRotate(CATransform3DMakeTranslation(-4, 0, 0), -rotateAngle, 0, 0, 1))
                 transformThree.beginTime = CACurrentMediaTime()
                 
                 strokeStartRight.toValue = 0.55
                 strokeStartRight.beginTime = CACurrentMediaTime()
             }else{
-                transformTwo.toValue = NSValue(CATransform3D:CATransform3DIdentity)
+                transformTwo.toValue = NSValue(caTransform3D:CATransform3DIdentity)
                 transformTwo.beginTime = CACurrentMediaTime()
                 
-                transformThree.toValue = NSValue(CATransform3D:CATransform3DIdentity)
+                transformThree.toValue = NSValue(caTransform3D:CATransform3DIdentity)
                 transformThree.beginTime = CACurrentMediaTime()
                 
                 strokeStartRight.toValue = 0
